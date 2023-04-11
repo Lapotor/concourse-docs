@@ -61,6 +61,13 @@ as performing all pipeline scheduling. It's basically the brain of Concourse.
   CONCOURSE_POSTGRES_SOCKET=/var/run/postgresql
   }}}
 
+  If you're running PostgreSQL with SSL mode you may need to set the
+  connection \link{SSL
+  mode}{https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNECT-SSLMODE}:
+  \codeblock{bash}{{{
+  CONCOURSE_POSTGRES_SSL_MODE=disable # default
+  }}}
+
   Now that everything's set, run:
 
   \codeblock{bash}{{{
